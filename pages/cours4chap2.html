@@ -1,0 +1,192 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/chaps.css"/>
+	<title> Les concepts de la sécurité logique </title>
+</head>
+<body>
+    <div id="conteneur">
+    
+    <header>
+        
+    <div id="pic">
+        
+    <div id="titre_entete">
+    <h1>Chapitre 2</h1><h2> Les concepts de la sécurité logique </h2>
+    </div>
+    <a href="cours4.html" id="back"></a>
+    </div>
+    </header> 
+    
+       
+    <nav>
+	 <ul>
+	    <li><a href="#int" >Introduction</a></li>
+         <li><a href="#clf" >Classification des informations</a></li>
+		 <li><a href="#pdt" > Protection du poste de travail</a></li>
+		 <li><a href="#cry" >Cryptographie</a></li>
+		 <li><a href="#svg" > Sauvegarde</a></li>
+        
+	 </ul>
+	 </nav>
+		     
+<section id="corps">
+    <section>
+<header id="int"><h3>Introduction </h3></header>
+<p>
+	Chaque société dispose aujourd'hui d'un volume non négligeable d'informations aux formats informatiques, ces données sont souvent d'une importance 
+	cruciale dans la survie de l'entreprise. 
+	Il est donc important de protéger ces informations, aussi bien de la divulgation, que de l'altération.
+	<p>
+	La SSI, est la Sécurité des Systèmes d'Information, elle doit être au centre de toute société voulant préserver ses travaux, ses secrets, ses avantages concurrentiels, …
+	<p>
+	Pour obtenir le résultat escompté, les moyens sont :
+	<p>
+	<ul>
+	<li>La classification de l'information </li>
+	<li>Le choix des mots de passe</li>
+	<li>La protection du poste de travail </li>
+	<li>La cryptographie</li>
+	<li>La sauvegarde</li>
+	</ul>
+	<p>
+	Cet article ne traitera bien sûr que de la SSI appliquée à l'informatique, la SSI couvrant un domaine bien plus important, concernant le recrutement,
+	la sécurité des locaux, la sécurité des informations aux formats papiers, …
+	
+</section>
+<section>
+
+<header id="clf"><h3>  Classification des informations</h3></header>
+<p>Pour être efficace dans la mise en place d'une SSI, il faut savoir quels documents méritent ou non une protection. En effet il vaut mieux chercher à sécuriser une zone restreinte mais de manière optimale plutôt que de chercher à tout sécuriser, 
+	ce qui impliquerait à coup sûr des failles de sécurité importantes.
+	<p>
+	Il faut donc classer l'information, la classification selon 3 étages  dans lesquels ont peut placer les documents :
+	<p>
+	<ul>
+	
+	<li>« à diffusion contrôlée » : Ces documents n'ont pas une importance primordiale,
+	leur diffusion n'entraînera qu'une perturbation ponctuelle pour l'entreprise. On peut parler de préjudice faible</li>	
+	<li>
+	« confidentiel » : Ces documents ont une importance non discutable, leur diffusion entraînera des séquelles compromettant l'action à court et moyen terme. 
+	On peut parler de préjudice grave
+	</li>
+	<li>« secret » : Ces documents ont une importance centrale et irréprochable, leur diffusion entraînera des séquelles graves et durables.
+	On peut parler de préjudice inacceptable.
+	</li>
+	</ul>
+	<p>
+	Cette classification, permet à la personne qui a le document en sa possession de se rendre compte de son importance et de l'attention à lui porter.
+	Cette classification permet également de savoir quel protocole de sécurité appliquer au document.
+                      
+</section>
+
+<section>
+
+<header id="pdt"><h3>  Protection du poste de travail</h3></header>
+	<ol>
+	<li>Mot de passe BOOT	</li>
+	<p>Le mot de passe BOOT peut paraître simpliste, mais il a une importance non négligeable, en effet il empêche le BOOT (comme son nom l'indique, il est aussi appelé « Mot de passe BIOS » par abus de langage).
+	<p>Il est en effet très intéressant de bloquer le BOOT, car une personne malveillante qui ne disposerait pas des mots de passe placés au log sous Windows pourrait très bien booter sur un live CD ( type Knoppix / Windows PE / Bizantine) et accéder à la plupart des données du poste.
+	
+	<p>
+	Le mot de passe BOOT est paramétrable depuis le BIOS de la carte mère, chaque BIOS étant très différent suivant les fabricants de carte mère, il n'existe pas de protocole universel, 
+	cependant la lecture de la documentation de la carte mère vous donnera toutes les informations nécessaires.
+
+	<li>Mot de passe administrateur</li>
+	<p>
+	Lors de l'installation de Windows, un mot de passe dit « administrateur » est fixé, ce dernier permet de se logger en tant que « super utilisateur » sur le poste, pour administrer un grand nombre de paramètres,
+	incluant la modification des comptes utilisateurs et de leurs mots de passe.
+	<p>
+Il faut être vigilant lors de l'achat de PC livré avec l'installation de Windows comprise. Dans ce cas si la personne qui a installé Windows n'a pas fixé un mot de passe administrateur, le compte « super administrateur » a pour login : « administrateur » mot de passe :  « {vide} ». Une personne malveillante peut donc facilement se logger en « super administrateur » et accéder 
+à toutes les informations du poste de travail.
+	<p>
+	
+	Il faut donc à la réception de ces machines (PC livré avec Windows pré installé), se logger en « super administrateur », puis modifier le mot de passe de cette session.
+	<li>Authentification forte	</li>
+	
+	<p>
+	Si l'utilisation de mots de passe vous paraît faible face à l'importance des données en jeux l'authentification forte peut être envisagée. Elle consiste en la nécessité d'un élément physique pour le log
+	( token -clé usb-, carte à puce, biométrie ) en plus d'un mot de passe ou d'un code PIN.
+	<p>
+Les tokens sont de petites clés USB de quelques Ko.
+	
+	</ol>
+</section> 
+  
+  <section>
+
+<header id="cry"><h3> Cryptographie</h3></header>
+	<ol>
+	<li>Introduction</li>
+	<p>
+	La cryptographie est l'étude des principes, méthodes et techniques mathématiques reliées aux aspects de sécurité de l'information telles la confidentialité, l'intégrité des données, l'authentification d'entités, et l'authentification de l'originalité des données.
+	C'est un ensemble de techniques qui fournit la sécurité de l'information.</br>
+
+La cryptographie est la réponse au besoin d'impossibilité de divulgation des données.
+<li>Notions de base</li>
+<p>
+Il existe deux grandes techniques de cryptographie : les systèmes de cryptographie à clés asymétriques et ceux à clés symétriques.</br>
+
+La cryptographie à clés symétriques est la plus connu, le document est chiffré avec une certaine clé, et il faut cette même clé pour déchiffrer le document.
+
+<p>
+La cryptographie à clés asymétriques se base sur le principe d'une clé dite publique, que l'on peut divulguer,
+ qui permet de chiffrer le document par l'émetteur, et d'une clé dite privée, secrète, qui permet au destinataire de déchiffrer le document.</br>
+
+La cryptographie a deux applications : l'authentification de l'auteur des documents, le stockage sécurisé de données. La seconde utilisation est bien entendu la plus utilisée, mais il ne faut pas négliger la première qui, avec l'utilisation grandissante du mail,
+ va très vite devenir indispensable pour certifier l'authenticité des courriels.	
+<li>Solutions payantes</li>	
+	<p>
+	Il existe de nombreuses solutions de cryptographie, lors de votre choix vous devez privilégier la robustesse de l'algorithme,
+	ainsi un 3DES avec des clés d'au moins 512 bit (en fonction de la puissance de votre poste de travail) semble être un bon compromis.
+	<p>
+	Sachez qu'il existe également des solutions de cryptage de disque complet dit « à la volée » : ce type de solution permet d'avoir ses données chiffrées en permanence sur 
+	son disque, chaque donnée est déchiffrée à la volée lors d'une demande d'accès par un programme.
+	
+	</ol>	
+
+</section> 
+<section>
+
+<header id="svg"><h3> Sauvgarde</h3></header>
+	<ol>
+	<li>Les sauvegardes incrémentales</li>
+	
+	<p>
+	Ces sauvegardes couvrent chacune le travail réalisé depuis la précédente,
+	elles doivent être réalisées à intervalles réguliers et rapprochés. On pourrait les appeler « sauvegarde temps réel ».</br>
+
+Ce type de sauvegarde doit être réalisé au minimum une fois par jour, ensuite chaque situation implique sa politique de sauvegarde, suivant le volume d'informations générées, la stabilité des lieux de stockage…
+	
+	<li>Les sauvegardes complètes</li>
+	<p>
+	Ces sauvegardes, ont pour but de pouvoir régénérer l'intégralité du parc informatique en cas d'altération grave des éléments de stockage (vol de serveurs, crash de disque durs…).
+	
+	
+	<p>
+	Ces sauvegardes doivent être faites plus rarement, un minimum d'une tous les deux semaines me paraît raisonnable, il faut bien sûr adapter ce délai à la situation de l'entreprise suivant les mêmes critères que les sauvegardes incrémentales. Cependant, ces sauvegardes doivent être faites de manière très consciencieuse : la solution parfaite, mais très lourde, étant de conserver un ghost de chaque disque dur du parc informatique. Il faut donc trouver un compromis, entre étendue de la sauvegarde, et réalisme de la mise en œuvre.
+	
+	<li>Gestion des sauvegardes</li>
+	<p>Une sauvegarde doit être testée : en effet, copier des fichiers sur un support amovible (disque externe, DVD, CD, etc.) ne suffit pas, il faut être sûr que la sauvegarde permet de remettre dans son état antérieur le parc informatique. Pour cela il faut prendre une sauvegarde complète, la redéployer, puis lui appliquer la sauvegarde incrémentale suivante, afin de retrouver
+	le parc informatique en l'état de la date de réalisation de la sauvegarde juxtaposée appliquée.
+	<li>La solution RAID</li>
+	<p>Le système de gestion de disque RAID permet plusieurs combinaisons. Celle qui nous intéresse est le RAID 0. En effet dans cette configuration, 
+	deux disques logiques (respectivement deux disques physiques dans notre cas) sont gérés comme un seul disque et sont en permanence l'image de l'autre,
+	ce qui présente comme intérêt qu'en cas de plantage irrécupérable de l'un des deux disques, le second contient toujours l'intégralité des informations,
+	et permet de continuer à travailler et à générer un nouveau disque pour la remise en place du RAID.</br>
+
+Cette solution permet donc de se protéger des pertes de données dues à des défaillances matérielles.
+	</ol>
+
+</section> 
+</section> 
+<footer id="pic">
+<p>Copyright &copy 2018 SÉCURITÉ INFORMATIQUE.All rights reserved </p> 
+</footer>
+       
+</div>
+    
+ </body>
+</html>

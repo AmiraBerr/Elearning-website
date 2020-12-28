@@ -1,0 +1,115 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.85em;
+	font-style : normal;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+
+
+
+
+
+#conteneur {	
+	width: 1000px;
+	border : 1px black solid;
+	padding: 0px 0px 0px 0px;
+	margin: 0px auto 0px auto;
+}
+
+
+#pic {
+	padding: 10px 0px 0px 10px;
+	margin: 0px 0px 0px 0px;
+	clear: both;
+	height: 70px;
+	border-bottom: 1px black solid;
+	background: black url("../img/hack1.jpg") left top;
+}
+
+#titre_entete {
+	width: 385px;
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+	float: left;
+}
+
+
+#back {
+    margin: -5px;
+    float:right;
+    width: 60px;
+    height: 50px;
+    background: url(../img/backwhite.png) no-repeat ;
+}
+
+
+
+
+
+h1 {
+	margin: 4px 0px 4px 0px;
+	padding: 0px;
+	color: #ffffff;
+	font-size: 1.7em;
+}
+h2 {
+	margin: 3px 0px 3px 0px;
+	padding: 0px;
+	color: #ffffff;
+	font-size: 1.0em;
+}	
+/*menu*/
+nav{
+	width: 180px;
+	padding: 10px 0px 10px 10px;
+	margin: 0px 0px 0px 0px;
+	float: left;
+	text-align: left;
+}
+
+nav ul{
+	margin: 5px 0px 5px 0px;
+	padding: 10px;
+}
+nav li{
+	font-weight: normal;
+	font-size: 1.1em;
+	padding-top: 7px;
+	margin: 0px 0px 5px 0px;
+}
+nav ul li a:visited {
+	color: #4c96ae;
+	text-decoration: none;
+	font-weight: bold;
+}
+nav ul li a:hover {
+	color: #042c76;
+	text-decoration: underline;
+	font-weight: bold;
+}
+nav ul li a {
+	color: #042c76;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/*corps*/
+#corps {
+	width: 670px;
+	padding: 10px 0px 10px 10px;
+	margin: 0px 0px 0px 0px;
+	float: left;
+	text-align: left;
+	border-left: 1px #BFBFBF solid;
+}
+
+
+/*footer*/
+footer p{
+    font-size: 13px;
+    text-align: center;
+    color:#fff;
+    
+}

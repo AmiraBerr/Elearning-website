@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/chaps.css" />
+	<title>Les attaques et les solutions</title>
+</head>
+<body>
+    <div id="conteneur">
+    
+    <header>
+        
+    <div id="pic">
+        
+    <div id="titre_entete">
+    <h1>Chapitre 3</h1><h2>Les attaques et les solutions </h2>
+    </div>
+     <a href="cours3.html" id="back"></a>
+    </div>
+    </header> 
+    
+       
+    <nav>
+	 <ul>
+	     <li><a href="#int" >Principales attaques </a></li>
+         <li><a href="#def" >Solutions des attaques sur internet   </a></li>
+		 
+        
+	 </ul>
+	 </nav>
+		     
+<section id="corps">
+    <section>
+<header id="int"><h3>Principales attaques  </h3></header>
+<ol>
+
+<li>Virus</li>
+<p>Le virus est un exécutable qui va exécuter des opérations plus ou moins destructrices sur votre machine. Les virus existent depuis que l'informatique est née et se propageaient initialement par disquettes de jeux ou logiciels divers ... Sur internet, les virus peuvent contaminer une machine de plusieurs manières. 
+
+
+<ul>
+<li>Téléchargement de logiciel puis exécution de celui-ci sans précautions </li>
+<li>Ouverture sans précautions de documents contenant des macros </li>
+<li>Pièce jointe de courrier électronique (exécutable, script type vbs ...)</li>
+<li>Ouverture d'un courrier au format HTML contenant du JavaScript exploitant une faille de sécurité du logiciel de courrier (normalement JAvaScript est sans danger).</li>
+<li>Exploitation d'un bug du logiciel de courrier (effectuer régulièrmeent les mises à jour)</li>
+</ul>
+<p>Les virus peuvent être très virulent mais ils coûtent aussi beaucoup de temps en mise en place d'antivirus et dans la répartition des dégats causés. On peut malheureusement trouver facilement des logiciels capables de générer des virus et donc permettant à des« amateurs » ( aussi appelés crackers) d'étaler leur incompétence.
+ 
+</br>La meilleur parade est l'utilisation d'un antivirus à jour et d'effectuer les mises à jour de slogiciels (pour éviter l'exploitation des bugs). 
+
+
+<li>Déni de service (Dos)</li>
+<p>Le but d'une telle attaque n'est pas de dérober des informations sur une machine distante, mais de paralyser un sevrice ou un réseau complet. Les utilisateurs ne peuvent plus alors accéderaux ressources. Les deux exemples principaux, sont le « ping flood » ou l'envoi massif de courrier électroniques pour saturer une boîte aux lettre (mailbombing). La meilleure parade est le firewall ou la répartition des serveurs sur un réseau sécurisé. 
+
+<li>Ecoute de réseau </li>
+<p>Il existe des logiciels qui, à l'image des analyseurs de réseau, permettent d'intercepter certaines informations qui transitent sur un réseau local, en retranscrivant les trames dans un format plus lisible (Network packet sniffing). C'est l'une des raisons qui font que la topologie en étoile autour d'un hub n'est pas la plus sécurisée, puisque les trames qui sont émises en « broadcast» sur le réseau local peuvent être interceptées. De plus, l'utilisateur n'a aucun moyen de savoir qu'un pirate a mis son réseau en écoute. L'utilisation de switcher (commutateurs) réduit les possibilités d'écoute mais en inondant le commutateur, celui-ci peut se mettre en mode « HUB » par « sécurité » !
+La meilleure parade est l'utilisation de mot de passe non rejouable, de carte à puce ou de calculette à mot de passe. 
+ 
+<li>Intrusion</li>
+<p>L'intrusion dans un système informatique a généralement pour but la réalisatiobn d'une menace et est donc une attaque. Les conséquences peuvent être catastrophiques : vol, fraude, incident diplomatique, chantage ... 
+</br>Le principal moyen pour prévenir les intrusions est le coupe-feu ("firewall"). Il est efficace contre les fréquentes attaques de pirates amateurs, mais d'une efficacité toute relative contre des pirates expériementés et bien informés. Une politique de gestion efficace des accès, des mots de passe et l'éude des fichiers « log » (traces) est complémentaire.
+
+<li>Cheval de troie</li>
+<p>L'image retenue de la mythologie est parlante; le pirate, avoir avoir accédé à votre système ou en utilisant votre crédulité, installe un logiciel qui va, à votre insu, lui transmettre par Internet les informations de vos disques durs. Un tel logiciel, aussi appelé troyen ou trojan, peut aussi être utilisé pour générer de nouvelles attaques sur d'autres serveurs en passant par le votre. Certains d'entre eux sont des « key logger » c'est-à-dire qu'ils enregistrent les frappes faites au clavier.
+La première mesure de protection face aux attaques, et de sécuriser au maximum l'accès à votre machine et de mettre en service un antivirus régulièrement mis à jour. Un nettoyeur de troyens peut aussi s'avérer utile. Attention : sous Windows, un partage de fichiers actif et trop permissif offre les mêmes possibilités sans que le visiteur n'ai besoin d'installer un logiciel ! 
+
+<li>Social engeneering</li>
+<p>En utilisant les moyens usuels (téléphone, email...) et en usurpant une identité, un pirate cherche à obtenir des renseignements confidentiels auprès du personnel de l'entreprise en vue d'une intrusion future. Seule une formation du personnel permet de se protéger de cette attaque. 
+
+</ol>
+</section>
+<section>
+
+<header id="def"><h3>Solutions des attaques sur internet </h3></header>
+<p>En entreprise, c'est le réseau local qui est connecté à Internet. Il est donc indispensable de contrôler les communications entre le réseau interne et l'extérieur. De plus une formation du personnel est indispensable (règles de sécurité, déontologie, attention aux participations aux forums qui sont archivées ...).
+<p>Les problèmes de sécurité qu'on peut rencontrer sur un réseau d'entreprise ou sur l'Internet relèvent d'abord de la responsabilité des victimes avant d'être imputables aux hackers. Une menace qui a sensiblement augmenté au cours de ces dernières années, nous indique la dernière étude du Computer Security Institute, un institut professionnel de San Francisco qui réalise chaque année un sondage auprès des entreprises en collaboration avec le FBI. Dans cette étude, plus de 40 % des sociétés interrogées ont déclaré que des intrus s'étaient introduits dans leurs systèmes depuis l'Internet, 38 % des sociétés ont détecté des attaques de type " déni de service «, et94 % ont été infectées par un virus en 2000.
+<p>D'autre part, votre sécurité peut dépendre d'autres entreprises dont vous pensez, parfois à tort, qu'elles ont assuré leur propre sécurité. Alors que le gouvernement et les forces de l'ordre cherchent à interpeller les intrus, les sociétés ne se préoccupent trop souvent que de relancer leurs réseaux après une attaque. " Le secteur privé ne cherche pas à savoir qui est responsable, tout ce qui intéresse les entreprises, c'est que l'attaque cesse. "
+<p>On propose donc des solutions aux différents types d'attaques qui peuvent avoir lieu en se connectant à Internet. 
+<ol>
+
+<li>IP spoofing </li>
+<p>Une solution à l’attaque qui utilise l’IP spoofing qui est une Usurpation d'adresse IP est une bonne configuration du routeur d'entrée qui permet d'éviter qu'une machine extérieur puisse se faire passer pour une machine interne
+
+
+<li>DNS spoofing</li>
+<p>Cette attaque qui a pour principe de pousser un serveur DNS à accepter l'intrusion a pour solution de séparer le DNS du LAN (Local Area Network) de celui de l'espace public.
+
+<li>Flooding</li>
+<p>Il consiste à envoyer des données inutiles en permanence pour rendre le réseau inutilisable Une bonne solution c'est le Raid massif de connexion non terminés.
+<li>Web bug </li>
+<p>
+Cette attaque a pour objectif d'envoyer un mail publicitaire en format HTML (même si l'apparence est normale) avec une image transparente gif d'un pixel par un lien du type :
+</br>Si le courrier est ouvert pendant la connexion, la requête de téléchargement de l'image vient confirmer la lecture du message et la validité de votre adresse.
+</br>Conseil : ne pas valider l'ouverture automatique du format HTML ou ne pas ouvrir ses courriers en ligne. Un utilitaire de détection de « web bug » BUGNOSIS est disponible sur.
+
+<li>Hoax (rumeur) </li>
+<p>Un « hoax » est une rumeur que l'on transmet par mail. Ces rumeurs colportent souvent des problèmes de sécurité soit disant découverts par des services officiels ou célèbre ... Elles peuvent causer un véritable préjudice à certaines sociétés et de toute façon encombrent le réseau. 
+ 
+Avant de transmettre un tel message il est prudent de vérifier son authenticité. www.hoaxbuster.com (site français) recense la plupart des messages bidons. 
+ 
+
+</ol>
+
+</section>
+
+</section>
+ 
+<footer id="pic">
+<p>Copyright &copy 2018 SÉCURITÉ INFORMATIQUE.All rights reserved </p> 
+</footer>
+       
+</div>
+    
+ </body>
+</html>
